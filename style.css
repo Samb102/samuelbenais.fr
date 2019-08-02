@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('./coolvetica.ttf')
+}
+
+body {
+    font-family: 'Coolvetica';
+    background: #3d3b3b;
+    height: 100vh;
+    color: #f7f7f7;
+}
+
+.wesh{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.fade-in-right {
+    animation: fadeInRight 1s;
+}
+
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
