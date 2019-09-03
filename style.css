@@ -8,15 +8,17 @@ body {
     background: #3d3b3b;
     height: 100vh;
     color: #f7f7f7;
+    overflow: hidden;
 }
 
-.wesh{
+#s-b {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100%;
+    font-size: 3em;
     text-align: center;
-    min-height: 100vh;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
