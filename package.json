@@ -11,6 +11,11 @@
     "type": "git",
     "url": "https://github.com/tr1s/tris-webpack-boilerplate"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn build"
+    }
+  }
   "keywords": [],
   "author": "tr1s",
   "license": "ISC",
@@ -49,6 +54,7 @@
   "dependencies": {
     "bulma": "^0.7.5",
     "global": "^4.4.0",
+    "husky": "^3.0.5",
     "lazysizes": "^5.1.1"
   }
 }
