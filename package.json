@@ -15,7 +15,7 @@
     "hooks": {
       "pre-push": "yarn build"
     }
-  }
+  },
   "keywords": [],
   "author": "tr1s",
   "license": "ISC",
