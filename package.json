@@ -1,60 +1,44 @@
 {
-  "name": "tris-webpack-boilerplate",
+  "name": "samuelbenais.fr",
   "version": "1.0.0",
-  "description": "A webpack boilerplate for static websites that has all the necessary modern tools and optimizations built-in.",
-  "private": true,
+  "description": "",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.prod.js",
-    "build": "webpack --config webpack.prod.js"
+    "start": "webpack-dev-server --hot --open --config webpack.config.js",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tr1s/tris-webpack-boilerplate"
+    "url": "https://github.com/mobxjs/mobx-react-boilerplate.git"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "yarn build"
-    }
-  },
-  "keywords": [],
-  "author": "tr1s",
-  "license": "ISC",
+  "author": "",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "@fullhuman/postcss-purgecss": "^1.3.0",
     "autoprefixer": "^9.6.1",
-    "babel-loader": "^8.0.6",
-    "clean-webpack-plugin": "^3.0.0",
-    "compression-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^5.0.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
-    "favicons-webpack-plugin": "^1.0.1",
     "file-loader": "^4.2.0",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-webpack-plugin": "^2.4.2",
-    "mini-css-extract-plugin": "^0.8.0",
+    "mobx-react-devtools": "^6.0.1",
     "node-sass": "^4.12.0",
-    "offline-plugin": "^5.0.7",
     "postcss-loader": "^3.0.0",
-    "preload-webpack-plugin": "^3.0.0-beta.4",
-    "sass-loader": "^6.0.3",
-    "script-ext-html-webpack-plugin": "^2.1.4",
+    "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
-    "terser-webpack-plugin": "^1.4.1",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0",
-    "webpack-merge": "^4.2.2",
-    "write-file-webpack-plugin": "^4.5.1"
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "bulma": "^0.7.5",
-    "global": "^4.4.0",
-    "husky": "^3.0.5",
-    "lazysizes": "^5.1.1"
+    "copy-webpack-plugin": "^5.0.4",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
+    "react": "^16.4.1",
+    "react-bash": "^1.6.0",
+    "react-dom": "^16.4.1",
+    "url-loader": "^2.1.0"
   }
 }
