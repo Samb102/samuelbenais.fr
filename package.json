@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --hot --open --config webpack.config.js",
+    "build": "webpack",
     "lint": "eslint src"
   },
   "repository": {
