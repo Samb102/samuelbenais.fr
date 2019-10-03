@@ -7,6 +7,11 @@
     "build": "webpack",
     "lint": "eslint src"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn build"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mobxjs/mobx-react-boilerplate.git"
