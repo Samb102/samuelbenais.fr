@@ -1,13 +1,37 @@
-import React, { Component } from "react";
+import React, { Fragment, Component } from "react";
 // import { observable, action } from "mobx";
 import { observer } from "mobx-react";
 import SocialButton from "./SocialButton"
 import Terminal from "./Terminal"
+import Particles from 'react-particles-js';
 
 @observer
 class App extends Component {
   render() {
-    return (
+    return (<Fragment>
+      <Particles
+        params={{
+          particles: {
+            line_linked: {
+              shadow: {
+                enable: true,
+                color: "#3CA9D1",
+                blur: 5
+              }
+            }
+          },
+          "number": {
+            "value": 200,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+        }}
+        style={{
+          position: 'absolute',
+          zIndex: '-1'
+        }} />
       <div id="sb-pane">
         <div id="sb">Samuel BENAIS</div>
         <div id="sb-title">IT Engineer</div>
@@ -17,7 +41,7 @@ class App extends Component {
           <SocialButton link="https://stackoverflow.com/users/7757590/samb102" id="stack-overflow" />
           <SocialButton link="https://fr.linkedin.com/in/samuel-benaïs-bb1018a5" id="linkedin" />
         </div>
-      </div>
+      </div></Fragment>
     );
   }
 

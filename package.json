@@ -45,6 +45,8 @@
     "react": "^16.4.1",
     "react-bash": "^1.6.0",
     "react-dom": "^16.4.1",
-    "url-loader": "^2.1.0"
+    "react-particles-js": "^2.7.0",
+    "url-loader": "^2.1.0",
+    "webpack-merge": "^4.2.2"
   }
 }

@@ -16,7 +16,7 @@ body {
   height: 100vh;
   color: #f7f7f7;
   overflow: hidden;
-  background: linear-gradient(-45deg, #011638, #9055A2, #2E294E, #011638);
+  background: linear-gradient(-45deg, #011638, #3E4348, #2E294E, #011638);
 	background-size: 400% 400%;
 	animation: bodyGradient 15s ease infinite;
 }
@@ -53,7 +53,7 @@ ul {
   justify-content: center;
   align-items: center;
   min-height: 100%;
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
@@ -66,94 +66,14 @@ ul {
   margin-top: 10px;
   font-size: 0.5em;
 }
-
-#sb-social {
-  display: flex;
-  animation: fadeInLeft 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.70s;
-  opacity: 0;
-
-  & > .sb-social-network {
-    margin-top: 20px;
-    width: 60px;
-    height: 60px;
-
-    & > .sb-social-network-container {
-      width: 51px;
-      height: 50px;
-      border-radius: 50%;
-      background: white;
-      position: absolute;
-      box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.2);
-
-      & > img {
-        position: relative;
-        top: 5px;
-        left: 6px;
-        height: 40px;
-        width: 40px;
-
-        &#stack-overflow {
-          top: 10px;
-          left: 11px;
-          width: 30px;
-          height: 30px;
-        }
-
-        // &#github {
-          
-        // }
-  
-        // &#linkedin {
-          
-        // }
-      }
-    }
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes bodyGradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 @media (max-width: 650px) {
   #sb-title {
     margin-top: 30px;
   }
   
+  #sb {
+    font-size:4em;
+  }
   #sb-social {
     margin-top: 30px;
   }

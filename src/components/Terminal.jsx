@@ -8,5 +8,5 @@ export const clear = {
 };
 
 const extensions = { clear };
-const Term = () => <Terminal extensions={extensions} />
+const Term = () => <Terminal prefix={'root'} extensions={extensions} />
 export default Term
