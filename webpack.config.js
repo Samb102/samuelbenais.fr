@@ -11,12 +11,9 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([{from: 'src/images', to: 'images'}]),
-    // New plugin
     new HtmlWebpackPlugin({
-      // injects bundle.js to our new index.html
       inject: true,
-      // copys the content of the existing index.html to the new /build
-      // index.html
+      favicon: 'src/favicon.ico',
       template: path.resolve('./index.html'),
     }),
   ],
