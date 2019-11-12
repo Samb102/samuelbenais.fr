@@ -7,11 +7,7 @@ module.exports = {
   devtool: 'inline-source-map',
   mode: 'development',
   entry: ['./src/index'],
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
-  },
+  output: {path: path.join(__dirname, 'dist'), filename: 'bundle.js'},
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([{from: 'src/images', to: 'images'}]),
