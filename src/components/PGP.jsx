@@ -27,9 +27,7 @@ const PGP = ({ }) => {
 
     return (
         <div>
-            <textarea ref={PGPKeyRef} id="sb-pgp-hidden-key">
-                {PGPPublicKey}
-            </textarea>
+            <textarea ref={PGPKeyRef} id="sb-pgp-hidden-key" value={PGPPublicKey} />
             <Manager>
                 <Reference>
                     {({ ref }) => (

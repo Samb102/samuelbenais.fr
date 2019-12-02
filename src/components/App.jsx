@@ -6,12 +6,25 @@ import SocialButton from "./SocialButton"
 import PGP from './PGP'
 
 class App extends Component {
+  state = {
+    isMobile: undefined
+  }
+
+  componentWillMount() {
+    this.setState({ isMobile: this.isMobile() })
+  }
+
+  isMobile() {
+    try { document.createEvent("TouchEvent"); return true; }
+    catch (e) { return false; }
+  }
+
   render() {
     return (
       <div>
-        <Particles
+        {!this.state.isMobile && <Particles
           params={particlesConfig}
-          style={particlesStyle} />
+          style={particlesStyle} />}
         <div id="sb-pane">
           <div id="sb">Samuel BENAIS</div>
           <div id="sb-title">IT Engineer</div>
