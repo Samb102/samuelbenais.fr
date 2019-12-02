@@ -6,12 +6,9 @@ import SocialButton from "./SocialButton"
 import PGP from './PGP'
 
 class App extends Component {
-  state = {
-    isMobile: undefined
-  }
-
-  componentWillMount() {
-    this.setState({ isMobile: this.isMobile() })
+  constructor(props) {
+    super(props)
+    this.state = { isMobile: this.isMobile() }
   }
 
   isMobile() {

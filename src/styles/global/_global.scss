@@ -53,7 +53,7 @@ ul {
   justify-content: center;
   align-items: center;
   min-height: 100%;
-  font-size: 2em;
+  font-size: 3.2em;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
@@ -69,7 +69,7 @@ ul {
 }
 
 #sb-email {
-  margin-top: 55px;
+  margin-top: 35px;
   opacity:0.8;
   font-size: 0.6em;
 }
@@ -81,6 +81,10 @@ ul {
   font-size: 0.6em;
   color: #f7f7f7;
   cursor: pointer;
+  outline: none; 
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
 }
 
 #sb-pgp-tooltip {
@@ -103,15 +107,21 @@ ul {
   white-space: pre-wrap;
 }
 
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
+  #sp-pane {
+    color: red !important;
+    font-size: 3.2em !important;
+  }
+
   #sb-title {
     margin-top: 30px;
   }
-  
-  #sb {
-    font-size:4em;
-  }
+
   #sb-social {
     margin-top: 30px;
+
+    & > #sb-social-network {
+      margin: 40px;
+    }
   }
 }
