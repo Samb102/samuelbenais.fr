@@ -20,7 +20,7 @@ const PGP = ({ }) => {
 
     const handleClick = () => {
         setHover(true)
-        setTimeout(() => setHover(false), 1500)
+        setTimeout(() => setHover(false), 2000)
         PGPKeyRef.current.select()
         document.execCommand("copy")
     }
