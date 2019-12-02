@@ -60,12 +60,49 @@ ul {
 
 #sb {
   animation: fadeInRight 1s;
+  font-size: 1.3em;
 }
 
 #sb-title {
   margin-top: 10px;
-  font-size: 0.5em;
+  font-size: 0.7em;
 }
+
+#sb-email {
+  margin-top: 55px;
+  opacity:0.8;
+  font-size: 0.6em;
+}
+
+#sb-pgp {
+  margin-top: 10px;
+  opacity:0.8;
+  text-decoration: underline;
+  font-size: 0.6em;
+  color: #f7f7f7;
+  cursor: pointer;
+}
+
+#sb-pgp-tooltip {
+  border: 1px solid ;
+  border-radius: 5px;
+  background-color: #333;
+  color: #f7f7f7;
+  padding: 13px 10px 9px 14px;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.2);
+  font-size: 0.4em;
+  margin-top: 10px;
+  animation: fadeOut 1s forwards;
+  animation-delay: 1s;
+}
+
+#sb-pgp-hidden-key {
+  position: absolute; 
+  opacity: 0;
+  top: -2000px;
+  white-space: pre-wrap;
+}
+
 @media (max-width: 650px) {
   #sb-title {
     margin-top: 30px;
