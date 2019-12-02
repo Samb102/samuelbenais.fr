@@ -8,6 +8,11 @@ module.exports = {
   mode: 'development',
   entry: ['./src/index'],
   output: {path: path.join(__dirname, 'dist'), filename: 'bundle.js'},
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([{from: 'src/images', to: 'images'}]),
