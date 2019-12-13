@@ -47,6 +47,19 @@ ul {
   list-style: none;
 }
 
+#sb-flex {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #sb-pane {
   display: flex;
   flex-direction: column;
