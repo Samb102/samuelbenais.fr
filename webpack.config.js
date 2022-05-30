@@ -1,31 +1,25 @@
-const path = require('path');
-const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  devtool: 'inline-source-map',
-  mode: 'development',
-  entry: ['./src/index'],
-  output: {path: path.join(__dirname, 'dist'), filename: 'bundle.js'},
+  devtool: "inline-source-map",
+  mode: "development",
+  entry: ["./src/index"],
+  output: { path: path.join(__dirname, "dist"), filename: "[name].js" },
   optimization: {
-    runtimeChunk: 'single',
+    runtimeChunk: "single",
     splitChunks: {
-      chunks: 'all',
+      chunks: "all",
       maxInitialRequests: Infinity,
       minSize: 0,
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name(module) {
-            // get the name. E.g. node_modules/packageName/not/this/part.js
-            // or node_modules/packageName
-            const packageName =
-                module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-
-            // npm package names are URL-safe, but some servers don't like @
-            // symbols
-            return `npm.${packageName.replace('@', '')}`;
+            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+            return `npm.${packageName.replace("@", "")}`;
           },
         },
       },
@@ -33,29 +27,34 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new CopyWebpackPlugin([{from: 'src/images', to: 'images'}]),
+    new CopyWebpackPlugin({ patterns: [{ from: "src/images", to: "images" }] }),
     new HtmlWebpackPlugin({
       inject: true,
-      favicon: 'src/favicon.ico',
-      template: path.resolve('./index.html'),
+      favicon: "src/favicon.ico",
+      template: path.resolve("./index.html"),
     }),
   ],
-  resolve: {extensions: ['.js', '.jsx']},
+  resolve: { extensions: [".js", ".jsx"] },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        use: ['babel-loader'],
-        include: path.join(__dirname, 'src')
+        use: ["babel-loader"],
+        include: path.join(__dirname, "src"),
       },
-      {test: /\.(ico|svg|ttf)$/, use: [{loader: 'file-loader'}]}, {
+      {
+        test: /\.(ico|svg|ttf)$/,
+        type: 'asset/resource'
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          'style-loader', {loader: 'css-loader', options: {sourceMap: true}},
-          {loader: 'postcss-loader', options: {sourceMap: true}},
-          {loader: 'sass-loader', options: {sourceMap: true}}
-        ]
-      }
-    ]
-  }
+          "style-loader",
+          { loader: "css-loader", options: { sourceMap: true } },
+          { loader: "postcss-loader", options: { sourceMap: true } },
+          { loader: "sass-loader", options: { sourceMap: true } },
+        ],
+      },
+    ],
+  },
 };
