@@ -38,7 +38,7 @@ class App extends Component {
         <div id="sb-flex">
           <div id="sb-pane">
             <div id="sb">Samuel BENAIS</div>
-            <div id="sb-title">IT Engineer</div>
+            <div id="sb-title">Cybersecurity engineer</div>
             <div id="sb-social">
               <SocialButton link="https://github.com/Samb102" id="github" />
               <SocialButton link="https://stackoverflow.com/users/7757590/samb102" id="stack-overflow" />

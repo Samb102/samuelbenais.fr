@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.config.js",
-    "build": "webpack -p",
+    "build": "webpack",
     "lint": "eslint src"
   },
   "husky": {

@@ -26,7 +26,6 @@ module.exports = {
     },
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin({ patterns: [{ from: "src/images", to: "images" }] }),
     new HtmlWebpackPlugin({
       inject: true,
